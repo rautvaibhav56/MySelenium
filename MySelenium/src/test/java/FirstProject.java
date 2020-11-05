@@ -9,27 +9,44 @@
   
   public class FirstProject {
   
-  @Test public void testDemo() { System.out.println("In Test Demo"); }
+  @Test public void testDemo() {
+	  
+	  System.out.println("In Test Demo"); }
   
   @BeforeMethod public void beforeMethod() {
+	  
   System.out.println("Before method"); }
   
-  @AfterMethod public void afterMethod() { System.out.println("After Method");
+  @AfterMethod public void afterMethod() {
+	  
+	  System.out.println("After Method");
   }
   
   
-  @BeforeClass public void beforeClass() { System.out.println("Before class");
+  @BeforeClass public void beforeClass() { 
+	  
+	  System.out.println("Before class");
   }
   
-  @AfterClass public void afterClass() { System.out.println("After class"); }
+  @AfterClass public void afterClass() { 
+	  
+	  System.out.println("After class"); }
   
-  @BeforeTest public void beforeTest() { System.out.println("beforeTest"); }
+  @BeforeTest public void beforeTest() { 
+	  
+	  System.out.println("beforeTest"); }
   
-  @AfterTest public void afterTest() { System.out.println("afterTest"); }
+  @AfterTest public void afterTest() {
+	  
+	  System.out.println("afterTest"); }
   
-  @BeforeSuite public void beforeSuite() { System.out.println("beforeSuite"); }
+  @BeforeSuite public void beforeSuite() {
+	  
+	  System.out.println("beforeSuite"); }
   
-  @AfterSuite public void afterSuite() { System.out.println("afterSuite"); }
+  @AfterSuite public void afterSuite() {
+	  
+	  System.out.println("afterSuite"); }
   
   }
  

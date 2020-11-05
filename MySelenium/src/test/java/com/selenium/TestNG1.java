@@ -13,7 +13,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 
-
 public class TestNG1 {
 	
 	WebDriver driver;
@@ -34,7 +33,7 @@ public class TestNG1 {
 		
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void doRegistration() {
 		
 		 WebElement username = driver.findElement(By.name("firstname"));
@@ -43,31 +42,47 @@ public class TestNG1 {
 	        
 	        String nameValue = username.getAttribute("name");
 	        
-	        System.out.println("Attribute of name is>>" + nameValue);
+	        System.out.println("Attribute of name is>>" +  nameValue);
 	        
 	        driver.findElement(By.name("lastname")).sendKeys("pqr");
 	        
-	        // driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("pqr");
-
-
-	        driver.findElement(By.name("reg_email__")).sendKeys("999999");
-	        
+	 
+	       
+	}
+	
+	@Test(priority = 2)
+	   public void usingMathClass( ) {
+		   
+			
+			  double randomDouble = Math.random();
+			  
+			  randomDouble = randomDouble * 999999999 + 10000;
+			  
+			  int randomInt = (int) randomDouble;
+			  
+	
+			  
+			  String str1 = Integer.toString(randomInt);
+			  
+		
+	       driver.findElement(By.name("reg_email__")).sendKeys(str1);
+	       
+	       System.out.println(str1);
+	       
 	       driver.findElement(By.name("reg_passwd__")).sendKeys("999999");
 	        
 	        System.out.println("valid credential is pass");
-	}
+		     
+		   }
 	
-	@Test
+	@Test(priority = 3)
     public void enterDate() {
-		//sel.selectByIndex //sel.selectByValue//selectByVisibleText
-		
-        WebElement element = driver.findElement(By.id("day"));
+
+		WebElement element = driver.findElement(By.id("day"));
         
         Select sel = new Select(element);
         
-        // sel.selectByIndex(7);
 
-        // sel.selectByValue("10");
         
         sel.selectByVisibleText("8");
 
@@ -75,7 +90,7 @@ public class TestNG1 {
     }
 
 	
-	@Test
+	@Test(priority = 4)
     public void entermonth() {
 
         // month data
@@ -98,11 +113,12 @@ public class TestNG1 {
             
             alloption.get(5).click();
         }
+        
         System.out.println(" valid month enter");
     }
 
 	
-	@Test
+	@Test(priority = 5)
     public void enterYear() {
 		
         List<WebElement> allyeardata = driver.findElements(By.xpath("//option[contains(@value,'199')]"));
@@ -122,10 +138,10 @@ public class TestNG1 {
         System.out.println("valid year enter");
     }
 
-	 @Test
+	 @Test(priority = 6)
 	    public void selectRadiobtn() {
 
-	       // WebElement radiobtn = driver.findElement(By.name("sex"));
+	      
 		 
 	        WebElement radiobtn = driver.findElement(By.id("u_0_5"));
 	        //u_0_5 

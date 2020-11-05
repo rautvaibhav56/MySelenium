@@ -29,11 +29,7 @@ public class SeleniumBasics {
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 
-	
-
 		System.out.println("open browser");
-		
-	
 
 	}
 
@@ -44,11 +40,10 @@ public class SeleniumBasics {
 				WebElement Uname = driver.findElement(By.id("txtUsername"));
 				Uname.sendKeys("Admin");
 
-				// 2.Name By.name("txtPassword");// By is a class
+				// 2.Name By.name("txtPassword");
 				driver.findElement(By.name("txtPassword")).sendKeys("admin123");
 
 				// click Login
-
 				WebElement Login = driver.findElement(By.id("btnLogin"));
 				Login.click();
 				
